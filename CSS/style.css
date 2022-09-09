@@ -1,0 +1,13 @@
+body {
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-area:
+    "inventory" "player-name" "player-name" "uplayer-name" "health"
+    "story-display" "story-display" "story-display" "story-display" "story-display"
+    "btn-1" "btn-1" "btn-2" "btn-3" "btn-3"
+  ;
+  text-align: center;
+}
+
+
