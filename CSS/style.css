@@ -1,13 +1,41 @@
 body {
   display: grid;
   grid-template-rows: 1fr 3fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-area:
-    "inventory" "player-name" "player-name" "uplayer-name" "health"
-    "story-display" "story-display" "story-display" "story-display" "story-display"
-    "btn-1" "btn-1" "btn-2" "btn-3" "btn-3"
+    "inventory" "player-name" "health"
+    "story-display" "story-display" "story-display"
+    "btn-1" "btn-2" "btn-3"
   ;
+  min-height: 100vh;
   text-align: center;
+  align-items: center;
 }
 
+#inventory {
+  grid-area: "inventory";
+}
 
+#player-name {
+  grid-area: "player-name";
+}
+
+#health {
+  grid-area: "health";
+}
+
+#story-display {
+  grid-area: "story-display";
+}
+
+#btn-1 {
+  grid-area: "btn-1";
+}
+
+#btn-2 {
+  grid-area: "btn-2";
+}
+
+#btn-3 {
+  grid-area: "btn-3";
+}
