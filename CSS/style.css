@@ -1,7 +1,7 @@
 body {
   display: grid;
   grid-template-areas:
-    "inventory player-name health"
+    "player-name player-name player-name"
     ". story-display ."
     "btn-1 btn-2 btn-3";
   grid-template-rows: 1fr 4fr 1fr;
@@ -12,22 +12,12 @@ body {
   align-items: center;
 }
 
-#inventory {
-  grid-area: inventory;
-}
-
 #player-name {
   grid-area: player-name;
 }
 
-#health {
-  grid-area: health;
-}
-
 #story-display {
   grid-area: story-display;
-
-
 }
 
 #btn-1 {
