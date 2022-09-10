@@ -1,5 +1,6 @@
 /*-------------------------------- Constants --------------------------------*/
-const storyChunks = []; //Fill this out tomorrow, I better see a story in here nerd. I'll kill you. I know where you live. 
+const storyChunks = []; //Fill this out tomorrow, I better see a story in here nerd. I'll kill you. I know where you live.
+
 
 
 
@@ -14,6 +15,7 @@ const playerNameContainer = document.querySelector("#player-name")
 const btn1 = document.querySelector("#btn-1");
 const btn2 = document.querySelector("#btn-2");
 const btn3 = document.querySelector("#btn-3");
+const btnStoryContent = document.querySelector("#story-content");
 
 
 
@@ -25,6 +27,7 @@ submitBtn.addEventListener('click', gameInit);
 function gameInit(evt) {
   formHandler(evt);
   revealOptions();
+  changeStory();
 }
 
 function formHandler(evt) {
@@ -41,4 +44,8 @@ function revealOptions() {
   btn1.removeAttribute("hidden");
   btn2.removeAttribute("hidden");
   btn3.removeAttribute("hidden");
+}
+
+function changeStory() {
+
 }
