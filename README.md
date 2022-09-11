@@ -7,4 +7,6 @@
 
 ### TECHNOLOGIES COMING SOON
 
-### PLANNED ITEMS COMING SOON
+### PLANNED ITEMS
+  -Inventory Feature
+  -Dynamic Health Element

@@ -62,7 +62,7 @@ const storyChunksC = [
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-let page = -1; //incrememt every time user clicks on either btn 1, 2 or 3, this will help us decide what index to pull our story from
+let page = -1;
 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -73,6 +73,9 @@ const btn1 = document.querySelector("#btn-1");
 const btn2 = document.querySelector("#btn-2");
 const btn3 = document.querySelector("#btn-3");
 const storyContent = document.querySelector("#story-content");
+const storyA = document.querySelector("#story-A")
+const storyB = document.querySelector("#story-B")
+const storyC = document.querySelector("#story-C")
 
 
 
@@ -105,8 +108,9 @@ function revealOptions() {
   btn3.removeAttribute("hidden");
 }
 
-function changeStory() {
+function changeStory(evt) {
   storyContent.textContent = "";
   page++;
-
+  
+  
 }
