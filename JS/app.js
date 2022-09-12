@@ -1,63 +1,14 @@
 /*-------------------------------- Constants --------------------------------*/
-const storyChunksA = [
-  {
-    storyPath: 'a',
-    storyPart: 0,
-    storySection: "",
-  },
-  {
-    storyPath: 'a',
-    storyPart: 1,
-    storySection: "",
-  },
-  {
-    storyPath: 'a',
-    storyPart: 2,
-    storySection: "",
-  },
-  {
-    storyPath: 'a',
-    storyPart: 3,
-    storySection: "",
-  },
-];
-
-
-const storyChunksB = [
-  {
-    storyPath: 'b',
-    storyPart: 0,
-    storySection: "",
-  },
-  {
-    storyPath: 'b',
-    storyPart: 1,
-    storySection: "",
-  },
-  {
-    storyPath: 'b',
-    storyPart: 2,
-    storySection: "",
-  },
-];
-
-const storyChunksC = [
-  {
-    storyPath: 'c',
-    storyPart: 0,
-    storySection: "",
-  },
-  {
-    storyPath: 'c',
-    storyPart: 1,
-    storySection: "",
-  },
-  {
-    storyPath: 'c',
-    storyPart: 2,
-    storySection: "",
-  },
-];
+const storyChunks = {
+  "begin": {
+    "content": "You awaken in the greater sea of souls; having just gained consciousness you are but a fraction of what you will become throughout your development. Would you like to begin?",
+    "responses": {
+      "a": "Stay here",
+      "b": "Plan to expound your malicious tendencies",
+      "c": "Begin development",
+    }
+  }
+}
 
 
 
@@ -108,7 +59,7 @@ function revealOptions() {
   btn3.removeAttribute("hidden");
 }
 
-function changeStory(evt) {
+function renderStory(evt) {
   storyContent.textContent = "";
   page++;
   
