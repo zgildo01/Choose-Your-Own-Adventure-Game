@@ -82,5 +82,12 @@ function chooseOption(evt) {
 }
 
 function renderStory(story) {
-  
+  let currentStoryChunk = storyChunks[story]
+  let text;
+
+  for() {
+
+  }
+  storyContent.innerHTML = currentStoryChunk.content;
+
 }
