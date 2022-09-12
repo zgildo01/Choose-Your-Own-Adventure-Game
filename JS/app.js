@@ -105,6 +105,7 @@ function chooseOption(evt) {
     page++;
     renderStory(page + "_" + response);
   }
+  confirmBtn.setAttribute("hidden", "true");
 }
 
 function renderStory(story) {
