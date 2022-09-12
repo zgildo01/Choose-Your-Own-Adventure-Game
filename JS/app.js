@@ -4,32 +4,37 @@ const storyChunks = {
     "content": "You awaken in the greater sea of souls; having just gained consciousness you are but a fraction of what you will become throughout your development. Would you like to begin?",
     "responses": {
       "a": "Stay here",
-      "b": "Give into your flaws",
+      "b": "Explore your thoughts",
       "c": "Begin development",
     }
   },
   //Ending 1, 
   "1_a": {
-    "content": "And so you decide to stay; numerous aeons pass, but your soul never grows. You remain grounded in the ethereal sea of humanity and will never truly find out your fullest capabilities.",
-    "end": true,
+    "content": "And so you decide to stay; numerous aeons pass, but your soul never grows. You remain grounded in the ethereal sea of humanity and will never truly live out your fullest capabilities. This is how you've chosen to meet your end.",
   },
-  //Evil path
+  //Good path
   "1_b": {
-    "content": `Just as soon as you regained your consciousness you decided to use it for malice. The illfully gotten gains you attain from any endeavor you henceforth set out to accomplish will be in the name of your own survival. Does this really sound like what you wanted to be?`,
+    "content": `You decide to explore the thoughts that perturbed countless of the lives you've lived; solemnly you reflect on one life you've lived in particular, you were a SWAT commander tasked with taking down a cult known for kidnappings and forced indoctrinations; were you civil with them?`,
     "responses": {
-      "a": "No, that can't be right",
-      "b": "I've simply accepted what I am",
-      "c": "I deserve it, I was born superior",
+      "a": "I was just and forthcoming.",
+      "b": "I didn't take them seriously.",
+      "c": "I was brutal in how I ordered the assault.",
     }
   },
-
-  //Good path
-  "1_c": {
-    "content": `Throughout this experience you will encounter many difficult choices, but these will strengthen your resolve. The difficulty itself of certain choices will tell you more about yourself. Are you ready to understand?`,
+  "2_a": {
+    "content": "Their souls were intertwined with yours, they understood you just as much as you understood them. That's how you ended up here. Don't you worry though, my lost child; salvation awaits you. Do you intend to continue your path of righteousness?",
     "responses": {
-      "d": "Of course",
-      "e": "I'm unsure of what's happening",
-      "f": "If it'll help me",
+      "a": "I don't think I will.",
+      "b": "I intend to be a good person.",
+    } 
+  },
+
+  //Evil path
+  "1_c": {
+    "content": `Throughout this experience you will encounter many scary and confusing choices, but these will strengthen your resolve. The difficulty of certain choices will tell you more about yourself than your response at times. Are you ready to understand?`,
+    "responses": {
+      "d": "Of course.",
+      "e": "I don't care what this is. I'm not participating.",
     }
   }
 
