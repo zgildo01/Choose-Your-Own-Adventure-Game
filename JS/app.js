@@ -65,7 +65,6 @@ function gameInit(evt) {
   resetBtn.removeAttribute("hidden");
   storyContent.innerHTML = '';
   renderStory("begin");
-  
 }
 
 function formHandler(evt) {
@@ -79,7 +78,7 @@ function formHandler(evt) {
 }
 //Set up this reset function after you fix the undefined <P> bug
 function reset() {
-
+  window.location.reload();
 }
 
 function chooseOption(evt) {
