@@ -55,37 +55,45 @@ const confirmBtn = document.querySelector("#confirm-btn");
 const resetBtn = document.querySelector("#reset-btn");
 const options = document.querySelector("#options");
 const choiceBtn = document.querySelector("#choice-btn");
+const startBtn = document.querySelector("#start");
 
 
 /*----------------------------- Event Listeners -----------------------------*/
-submitBtn.addEventListener('click', gameInit);
+startBtn.addEventListener('click', gameInit);
+submitBtn.addEventListener('click', formHandler);
 confirmBtn.addEventListener('click', chooseOption);
 resetBtn.addEventListener('click', reset);
 choiceBtn.addEventListener('click', function(evt) {
   confirmBtn.removeAttribute("hidden");
 })
 
+
 /*-------------------------------- Functions --------------------------------*/
-function gameInit(evt) {
-  evt.preventDefault();
-  formHandler(evt);
+function gameInit() {
   resetBtn.removeAttribute("hidden");
   storyContent.innerHTML = '';
   renderStory("begin");
+  startBtn.style.display = "none";
 }
 
-function formHandler() {
+function formHandler(evt) {
+  evt.preventDefault();
   playerName = chosenName.value;
   renderPlayerName();
-  submitBtn.style.display = "none";
-  chosenName.style.display = "none";
 }
 
 function renderPlayerName() {
-  const playerNameP = document.createElement('p');
-  playerNameP.setAttribute("id", "#user-input-name");
-  playerNameP.textContent = `Welcome home, ${(playerName).substring(0, 1).toUpperCase()+ (playerName).substring(1)}.`;
-  playerNameContainer.appendChild(playerNameP);
+  if(playerName.match(letters) && playerName.length <= 20){
+    const playerNameP = document.createElement('p');
+    playerNameP.setAttribute("id", "#user-input-name");
+    playerNameP.textContent = `Welcome home, ${(playerName).substring(0, 1).toUpperCase()+ (playerName).substring(1)}.`;
+    playerNameContainer.appendChild(playerNameP);
+    submitBtn.style.display = "none";
+    chosenName.style.display = "none";
+    startBtn.removeAttribute("hidden");
+  } else {
+    storyContent.innerHTML = "Your name was less than 20 characters and only contained letters as far as I remember..."
+  }
 }
 
 function reset() {
