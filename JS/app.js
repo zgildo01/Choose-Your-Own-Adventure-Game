@@ -54,16 +54,14 @@ const storyContent = document.querySelector("#story-content");
 const confirmBtn = document.querySelector("#confirm-btn");
 const resetBtn = document.querySelector("#reset-btn");
 const options = document.querySelector("#options");
-const choiceBtn = document.querySelector("#choice-btn");
 const startBtn = document.querySelector("#start");
-
 
 /*----------------------------- Event Listeners -----------------------------*/
 startBtn.addEventListener('click', gameInit);
 submitBtn.addEventListener('click', formHandler);
 confirmBtn.addEventListener('click', chooseOption);
 resetBtn.addEventListener('click', reset);
-choiceBtn.addEventListener('click', function(evt) {
+options.addEventListener('click', function(evt) {
   confirmBtn.removeAttribute("hidden");
 })
 
@@ -83,7 +81,7 @@ function formHandler(evt) {
 }
 
 function renderPlayerName() {
-  if(playerName.match(letters) && playerName.length <= 20){
+  if(playerName.match(letters) && playerName.length <= 20 && playerName !== ''){
     const playerNameP = document.createElement('p');
     playerNameP.setAttribute("id", "#user-input-name");
     playerNameP.textContent = `Welcome home, ${(playerName).substring(0, 1).toUpperCase()+ (playerName).substring(1)}.`;
@@ -91,6 +89,7 @@ function renderPlayerName() {
     submitBtn.style.display = "none";
     chosenName.style.display = "none";
     startBtn.removeAttribute("hidden");
+    storyContent.innerHTML = `Welcome ${playerName}`
   } else {
     storyContent.innerHTML = "Your name was less than 20 characters and only contained letters as far as I remember..."
   }
@@ -114,7 +113,7 @@ function renderStory(story) {
 
   for(let property in currentStoryChunk["responses"]) {
     if(currentStoryChunk["responses"].hasOwnProperty(property)) {
-      text += '<label><input id="choice-btn" type="radio" name="response" value="' + property + '"/><span>' + currentStoryChunk['responses'][property] + '</span></label>';
+      text += '<label><input class="choice-btns" type="radio" name="response" value="' + property + '"/><span>' + currentStoryChunk['responses'][property] + '</span></label>';
     }
   }
 
