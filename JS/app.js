@@ -32,8 +32,9 @@ const storyC = document.querySelector("#story-C")
 
 /*----------------------------- Event Listeners -----------------------------*/
 submitBtn.addEventListener('click', gameInit);
-btn1.addEventListener('click', changeStory);
-
+btn1.addEventListener('click', renderStory);
+btn2.addEventListener('click', renderStory);
+btn3.addEventListener('click', renderStory);
 
 /*-------------------------------- Functions --------------------------------*/
 function gameInit(evt) {
