@@ -46,6 +46,7 @@ const chosenName = document.querySelector("#chosen-name")
 const playerNameContainer = document.querySelector("#player-name")
 const storyContent = document.querySelector("#story-content");
 const confirmBtn = document.querySelector("#confirm-btn");
+const resetBtn = document.querySelector("#reset-btn");
 const options = document.querySelector("#options");
 
 
@@ -53,12 +54,16 @@ const options = document.querySelector("#options");
 /*----------------------------- Event Listeners -----------------------------*/
 submitBtn.addEventListener('click', gameInit);
 confirmBtn.addEventListener('click', chooseOption);
+resetBtn.addEventListener('click', reset);
 
 
 /*-------------------------------- Functions --------------------------------*/
 function gameInit(evt) {
   formHandler(evt);
-  confirmBtn.removeAttribute("hidden")
+  confirmBtn.removeAttribute("hidden");
+  resetBtn.removeAttribute("hidden");
+  storyContent.innerHTML = '';
+  renderStory("begin");
   
 }
 
@@ -72,6 +77,9 @@ function formHandler(evt) {
   chosenName.style.display = "none";
 }
 
+function reset() {
+
+}
 
 function chooseOption(evt) {
   response = document.querySelectorAll('input[type=radio]:checked')[0].value;
@@ -85,9 +93,12 @@ function renderStory(story) {
   let currentStoryChunk = storyChunks[story]
   let text;
 
-  for() {
-
+  for(let property in currentStoryChunk["responses"]) {
+    if(currentStoryChunk["responses"].hasOwnProperty(property)) {
+      text += '<label><input type="radio" name="response" value="' + property + '"/><span>' + currentStoryChunk["responses"][property] + '</span></label>'
+    }
   }
-  storyContent.innerHTML = currentStoryChunk.content;
 
+  storyContent.innerHTML = currentStoryChunk.content;
+  options.innerHTML = text;
 }
