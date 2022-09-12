@@ -14,22 +14,24 @@ const storyChunks = {
   },
   //Evil path
   "1_b": {
-    "content": `Just as soon as you regained your consciousness you decided to use it for malice. The illfully gotten gains you attain from any endeavor you henceforth set out to accomplish will be in the name of your own survival. Does this really sound like what ${chosenName.value} wanted to be?`,
+    "content": `Just as soon as you regained your consciousness you decided to use it for malice. The illfully gotten gains you attain from any endeavor you henceforth set out to accomplish will be in the name of your own survival. Does this really sound like what you wanted to be?`,
     "responses": {
       "a": "No, that can't be right",
       "b": "I've simply accepted what I am",
       "c": "I deserve it, I was born superior",
     }
   },
+
   //Good path
   "1_c": {
-    "content": `Welcome then, ${chosenName.value}. Throughout this experience you will encounter many difficult choices, but these will strengthen your resolve. The difficulty itself of certain choices will tell you more about yourself. Are you ready to understand?`,
+    "content": `Throughout this experience you will encounter many difficult choices, but these will strengthen your resolve. The difficulty itself of certain choices will tell you more about yourself. Are you ready to understand?`,
     "responses": {
-      "a": "Of course",
-      "b": "I'm unsure of what's happening",
-      "c": "If it'll help me",
+      "d": "Of course",
+      "e": "I'm unsure of what's happening",
+      "f": "If it'll help me",
     }
   }
+
 }
 
 
@@ -44,16 +46,19 @@ const chosenName = document.querySelector("#chosen-name")
 const playerNameContainer = document.querySelector("#player-name")
 const storyContent = document.querySelector("#story-content");
 const confirmBtn = document.querySelector("#confirm-btn");
+const options = document.querySelector("#options");
 
 
 
 /*----------------------------- Event Listeners -----------------------------*/
 submitBtn.addEventListener('click', gameInit);
+confirmBtn.addEventListener('click', chooseOption);
+
 
 /*-------------------------------- Functions --------------------------------*/
 function gameInit(evt) {
   formHandler(evt);
-  revealOptions();
+  confirmBtn.removeAttribute("hidden")
   
 }
 
@@ -68,14 +73,14 @@ function formHandler(evt) {
 }
 
 
-
 function chooseOption(evt) {
-  page++;
-  
-  renderStory();
+  response = document.querySelectorAll('input[type=radio]:checked')[0].value;
+  if(response) {
+    page++;
+    renderStory(page + "_" + response);
+  }
 }
 
-function renderStory() {
-  let currentStoryChunk = storyChunks[story]
+function renderStory(story) {
   
 }
