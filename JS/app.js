@@ -10,7 +10,8 @@ const storyChunks = {
   },
   //Ending 1, 
   "1_a": {
-    "content": "And so you decide to stay; numerous aeons pass, but your soul never grows. You remain grounded in the ethereal sea of humanity and will never truly find out your fullest capabilities."
+    "content": "And so you decide to stay; numerous aeons pass, but your soul never grows. You remain grounded in the ethereal sea of humanity and will never truly find out your fullest capabilities.",
+    "end": true,
   },
   //Evil path
   "1_b": {
@@ -76,7 +77,7 @@ function formHandler(evt) {
   submitBtn.style.display = "none";
   chosenName.style.display = "none";
 }
-
+//Set up this reset function after you fix the undefined <P> bug
 function reset() {
 
 }
@@ -90,12 +91,12 @@ function chooseOption(evt) {
 }
 
 function renderStory(story) {
-  let currentStoryChunk = storyChunks[story]
-  let text;
+  let currentStoryChunk = storyChunks[story];
+  let text = '';
 
   for(let property in currentStoryChunk["responses"]) {
     if(currentStoryChunk["responses"].hasOwnProperty(property)) {
-      text += '<label><input type="radio" name="response" value="' + property + '"/><span>' + currentStoryChunk["responses"][property] + '</span></label>'
+      text += '<label><input type="radio" name="response" value="' + property + '"/><span>' + currentStoryChunk['responses'][property] + '</span></label>';
     }
   }
 
