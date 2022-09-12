@@ -39,12 +39,12 @@ const storyChunks = {
   }
 
 }
-
+const letters = /^[A-Za-z]+$/
 
 
 /*---------------------------- Variables (state) ----------------------------*/
 let page = 0;
-
+let playerName = '';
 
 /*------------------------ Cached Element References ------------------------*/
 const submitBtn = document.querySelector("#submit-btn");
@@ -54,34 +54,40 @@ const storyContent = document.querySelector("#story-content");
 const confirmBtn = document.querySelector("#confirm-btn");
 const resetBtn = document.querySelector("#reset-btn");
 const options = document.querySelector("#options");
-
+const choiceBtn = document.querySelector("#choice-btn");
 
 
 /*----------------------------- Event Listeners -----------------------------*/
 submitBtn.addEventListener('click', gameInit);
 confirmBtn.addEventListener('click', chooseOption);
 resetBtn.addEventListener('click', reset);
-
+choiceBtn.addEventListener('click', function(evt) {
+  confirmBtn.removeAttribute("hidden");
+})
 
 /*-------------------------------- Functions --------------------------------*/
 function gameInit(evt) {
+  evt.preventDefault();
   formHandler(evt);
-  confirmBtn.removeAttribute("hidden");
   resetBtn.removeAttribute("hidden");
   storyContent.innerHTML = '';
   renderStory("begin");
 }
 
-function formHandler(evt) {
-  evt.preventDefault();
-  const playerName = document.createElement('p');
-  playerName.setAttribute("id", "#user-input-name");
-  playerName.textContent = `Welcome home, ${(chosenName.value).substring(0, 1).toUpperCase()+ (chosenName.value).substring(1)}.`;
-  playerNameContainer.appendChild(playerName);
+function formHandler() {
+  playerName = chosenName.value;
+  renderPlayerName();
   submitBtn.style.display = "none";
   chosenName.style.display = "none";
 }
-//Set up this reset function after you fix the undefined <P> bug
+
+function renderPlayerName() {
+  const playerNameP = document.createElement('p');
+  playerNameP.setAttribute("id", "#user-input-name");
+  playerNameP.textContent = `Welcome home, ${(playerName).substring(0, 1).toUpperCase()+ (playerName).substring(1)}.`;
+  playerNameContainer.appendChild(playerNameP);
+}
+
 function reset() {
   window.location.reload();
 }
@@ -100,7 +106,7 @@ function renderStory(story) {
 
   for(let property in currentStoryChunk["responses"]) {
     if(currentStoryChunk["responses"].hasOwnProperty(property)) {
-      text += '<label><input type="radio" name="response" value="' + property + '"/><span>' + currentStoryChunk['responses'][property] + '</span></label>';
+      text += '<label><input id="choice-btn" type="radio" name="response" value="' + property + '"/><span>' + currentStoryChunk['responses'][property] + '</span></label>';
     }
   }
 
