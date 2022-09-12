@@ -32,9 +32,9 @@ const storyC = document.querySelector("#story-C")
 
 /*----------------------------- Event Listeners -----------------------------*/
 submitBtn.addEventListener('click', gameInit);
-btn1.addEventListener('click', renderStory);
-btn2.addEventListener('click', renderStory);
-btn3.addEventListener('click', renderStory);
+btn1.addEventListener('click', chooseOption);
+btn2.addEventListener('click', chooseOption);
+btn3.addEventListener('click', chooseOption);
 
 /*-------------------------------- Functions --------------------------------*/
 function gameInit(evt) {
@@ -60,7 +60,7 @@ function revealOptions() {
   btn3.removeAttribute("hidden");
 }
 
-function renderStory(evt) {
+function chooseOption(evt) {
   storyContent.textContent = "";
   page++;
   
