@@ -3,8 +3,9 @@ body {
   grid-template-areas:
     "player-name player-name player-name"
     ". story-display ."
-    "btn-1 btn-2 btn-3";
-  grid-template-rows: 1fr 4fr 1fr;
+    "choices choices choices"
+    "bottom-btns bottom-btns bottom-btns";
+  grid-template-rows: 1fr 4fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
 
   min-height: 100vh;
@@ -20,14 +21,10 @@ body {
   grid-area: story-display;
 }
 
-#btn-1 {
-  grid-area: btn-1;
+#options {
+  grid-area: choices;
 }
 
-#btn-2 {
-  grid-area: btn-2;
-}
-
-#btn-3 {
-  grid-area: btn-3;
+#bottom-btns {
+  grid-area: bottom-btns;
 }

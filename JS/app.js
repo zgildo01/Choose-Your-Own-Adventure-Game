@@ -27,7 +27,7 @@ const storyChunks = {
     "responses": {
       "a": "Of course",
       "b": "I'm unsure of what's happening",
-      "c": ""
+      "c": "If it'll help me",
     }
   }
 }
@@ -42,21 +42,13 @@ let page = 0;
 const submitBtn = document.querySelector("#submit-btn");
 const chosenName = document.querySelector("#chosen-name")
 const playerNameContainer = document.querySelector("#player-name")
-const btn1 = document.querySelector("#btn-1");
-const btn2 = document.querySelector("#btn-2");
-const btn3 = document.querySelector("#btn-3");
 const storyContent = document.querySelector("#story-content");
-const storyA = document.querySelector("#story-A")
-const storyB = document.querySelector("#story-B")
-const storyC = document.querySelector("#story-C")
+const confirmBtn = document.querySelector("#confirm-btn");
 
 
 
 /*----------------------------- Event Listeners -----------------------------*/
 submitBtn.addEventListener('click', gameInit);
-btn1.addEventListener('click', chooseOption);
-btn2.addEventListener('click', chooseOption);
-btn3.addEventListener('click', chooseOption);
 
 /*-------------------------------- Functions --------------------------------*/
 function gameInit(evt) {
@@ -75,11 +67,7 @@ function formHandler(evt) {
   chosenName.style.display = "none";
 }
 
-function revealOptions() {
-  btn1.removeAttribute("hidden");
-  btn2.removeAttribute("hidden");
-  btn3.removeAttribute("hidden");
-}
+
 
 function chooseOption(evt) {
   page++;
