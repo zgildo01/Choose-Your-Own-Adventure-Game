@@ -88,41 +88,59 @@ function renderStory(story) {
 
 const storyChunks = {
   "begin": {
-    "content": `You lay in the infinite void, cold and unfeeling; you've achieved such a level of peace that you have never known before, yet, just as you settle in you hear a faint voice. "${chosenName.value}!" Give in?`,
+    "content": `You lay in the infinite void, yet you feel warm and happy; you've achieved such a level of peace that you have never known before, yet, just as you settle in you hear a faint voice. "${chosenName.value}! Are you there? It's dispatch, ${chosenName.value}"`,
     "responses": {
-      "a": "Ignore the voice",
-      "b": "Fight to listen",
-      "c": "Begin development",
+      "a": "Ignore the voice", //leads to ending
+      "b": "Regain consciousness and respond" //leads to 1_b
     }
   },
   //Ending 1, 
   "1_a": {
-    "content": "Your soul soon leaves your body, having been engulfed by a world-eating cosmic entity. No sooner did you find out what happened to you while you roamed the conscious world than you gave into the calm embrace of non-existance.",
+    "content": "Your physical body begins to crumble into ash, yet you feel nothing. You are not conscious of the physical world, as your eyes close all you see is a never-ending dream engulfing you.",
   },
+
   //Good path
   "1_b": {
-    "content": `You decide to explore the thoughts that perturbed countless of the lives you've lived; solemnly you reflect on one life you've lived in particular, you were a SWAT commander tasked with taking down a cult known for kidnappings and forced indoctrinations; were you civil with them?`,
+    "content": `You let out a sharp exhale and open your eyes, as light pours into your tired eyes you look around the room and notice people laying all around you. The room has been swallowed by flames, you have to get out. A voice startles you as it exclaims again: "${chosenName.value}? Come in, do you read?". It appears somehow your walkie talkie wasn't broken in the confusion.`,
     "responses": {
-      "a": "I was just and forthcoming.",
-      "b": "I didn't take them seriously.",
-      "c": "I was brutal in how I ordered the assault.",
+      "a": "Respond to the walkie-talkie informing them of your current state", //leads to 2_a
+      "b": "Examine one of the bodies", //leads to 2_b
+      "c": "Try to find an exit", // leads to ending
     }
   },
   "2_a": {
-    "content": "Their souls were intertwined with yours, they understood you just as much as you understood them. That's how you ended up here. Don't you worry though, my lost child; salvation awaits you. Do you intend to continue your path of righteousness?",
+    "content": `"${chosenName.value}! You're alive! The team thought we had lost you, listen, you're in a rough spot. Those psychos took you into their little "ascendance", they've taken a couple in your team, check to see if they're alright"`,
     "responses": {
-      "a": "I don't think I will.",
-      "b": "I intend to be a good person.",
-    } 
+      "a": "Doesn't look good, dispatch..",
+      "b": "I'm not even sure they're here.", //leads to ending
+    }
+  },
+  "3_a": {
+    "content": `Dispatch doesn't respond, so you scan the room around you finding no exit.. TO BE CONTINUED` //TO BE CONTINUED
+  },
+  //Left behind ending
+  "3_b": {
+    "content": `"${chosenName.value}, just hang tight. We'll send a search party for you, thankfully they made it out!" As these words echoed out into the flaming room around you, a heavy drowsiness overtakes you; a never-ending dream begins to engulf you.`,
+  },
+  "2_b": {
+    "content": `As you approach one of the bodies you notice it lays there with its eyes open. Almost as if it were in a conscious state, yet it's not breathing. You attempt to check for a heartbeat and the arm begins to crumble as if it were dust.`,
+    "responses": {
+      "c": "Inform dispatch of what you've just seen",
+      "d": "Find an exit" //leads to ending
+    }
+  },
+  "3_c": {
+    "content": `Dispatch doesn't respond, so you scan the room around you finding no exit.. TO BE CONTINUED` //TO BE CONTINUED
   },
 
-  //Evil path
-  "1_c": {
-    "content": `Throughout this experience you will encounter many scary and confusing choices, but these will strengthen your resolve. The difficulty of certain choices will tell you more about yourself than your response at times. Are you ready to understand?`,
-    "responses": {
-      "d": "Of course.",
-      "e": "I don't care what this is. I'm not participating.",
-    }
-  }
+  //Barricaded ending
+  "3_b": {
+    "content": `As you examine your surroundings you notice you're underground, the way out has been completely barricaded. The flames begin to spread around you and move in unnatural ways, before you know it, your eyes begin to close again. The voice coming from the walkie talkie grows quieter and quieter, you're soon trapped in a never-ending dream.`,
+  },
+
+  //Barricaded ending
+  "2_c": {
+    "content": `As you examine your surroundings you notice you're underground, the way out has been completely barricaded. The flames begin to spread around you and move in unnatural ways, before you know it, your eyes begin to close again. The voice coming from the walkie talkie grows quieter and quieter, you're soon trapped in a never-ending dream.`,
+  },
 
 }
