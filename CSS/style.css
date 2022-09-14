@@ -38,7 +38,8 @@ body {
 
 #story-display {
   grid-area: story-display;
-  font-size: 32px;
+  font-size: 25px;
+  font-weight: normal;
 }
 
 #options {
@@ -49,16 +50,42 @@ body {
   grid-area: bottom-btns;
 }
 
-#start{
-  height: 50px;
-  width: 100px;
-  border: 4px solid white;
+#chosen-name {
+  border: 3px solid white;
+  background-color: black;
+  color: white;
+}
+
+button {
+  border: 3px solid white;
   background-color: black;
   color: white;
   cursor: pointer;
 }
 
-label {
+#bottom-btns {
+  align-items: center;
+}
+
+#start{
+  height: 50px;
+  width: 100px;
+  border: 4px solid white;
+}
+
+#confirm-btn {
+  height: 50px;
+  width: 100px;
+  border: 4px solid white;
+}
+
+#reset-btn {
+  height: 50px;
+  width: 100px;
+  border: 4px solid white;
+}
+
+label > input{
   border: 3px solid white;
-  
+  margin: 0 auto;
 }
