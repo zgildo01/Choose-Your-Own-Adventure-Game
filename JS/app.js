@@ -1,5 +1,5 @@
 /*-------------------------------- Constants --------------------------------*/
-const letters = /^[A-Za-z]+$/
+const letters = /^[A-Za-z]+$/;
 
 
 /*---------------------------- Variables (state) ----------------------------*/
@@ -46,7 +46,7 @@ function renderPlayerName() {
   if(playerName.match(letters) && playerName.length <= 20 && playerName !== ''){
     const playerNameP = document.createElement('p');
     playerNameP.setAttribute("id", "#user-input-name");
-    playerNameP.textContent = `Welcome home, ${(playerName).substring(0, 1).toUpperCase()+ (playerName).substring(1)}.`;
+    playerNameP.textContent = `Welcome home, ${(playerName).substring(0, 1).toUpperCase() + (playerName).substring(1)}.`;
     playerNameContainer.appendChild(playerNameP);
     submitBtn.style.display = "none";
     chosenName.style.display = "none";
@@ -86,9 +86,9 @@ function renderStory(story) {
 
 /*-------------------------------- Story --------------------------------*/
 
-const storyChunks = {
+let storyChunks = {
   "begin": {
-    "content": `You lay in the infinite void, yet you feel warm and happy; you've achieved such a level of peace that you have never known before, yet, just as you settle in you hear a faint voice. "${chosenName.value}! Are you there? It's dispatch, ${chosenName.value}"`,
+    "content": `You lay in the infinite void, yet you feel warm and happy; you've achieved such a level of peace that you have never known before, yet, just as you settle in you hear a faint voice. "${chosenName.value}! Are you there? It's dispatch, ${chosenName.value}."`,
     "responses": {
       "a": "Ignore the voice", //leads to ending
       "b": "Regain consciousness and respond" //leads to 1_b
@@ -111,12 +111,13 @@ const storyChunks = {
   "2_a": {
     "content": `"${chosenName.value}! You're alive! The team thought we had lost you, listen, you're in a rough spot. Those psychos took you into their little "ascendance", they've taken a couple in your team, check to see if they're alright"`,
     "responses": {
-      "a": "Doesn't look good, dispatch..",
+      "a": "Doesn't look good, dispatch..", //leads to 3_a
       "b": "I'm not even sure they're here.", //leads to ending
     }
   },
+  //escape ending?
   "3_a": {
-    "content": `Dispatch doesn't respond, so you scan the room around you finding no exit.. TO BE CONTINUED` //TO BE CONTINUED
+    "content": `Dispatch doesn't respond, so you scan the room around you. Fortunately, you find a shovel amidst all the rubble and chaos. You're able to then unbarricade the door in front of you. You stumble out of the door and up the stairs only to find the same visage, mayhem everywhere. As you exit the premise the moon looks different, in fact, the whole sky looks different. It all feels surreal, like a dream..`, 
   },
   //Left behind ending
   "3_b": {
@@ -125,16 +126,16 @@ const storyChunks = {
   "2_b": {
     "content": `As you approach one of the bodies you notice it lays there with its eyes open. Almost as if it were in a conscious state, yet it's not breathing. You attempt to check for a heartbeat and the arm begins to crumble as if it were dust.`,
     "responses": {
-      "c": "Inform dispatch of what you've just seen",
+      "c": "Inform dispatch of what you've just seen", //leads to 3_c
       "d": "Find an exit" //leads to ending
     }
   },
   "3_c": {
-    "content": `Dispatch doesn't respond, so you scan the room around you finding no exit.. TO BE CONTINUED` //TO BE CONTINUED
+    "content": `The radio emits garbled noises, clearly your luck ran out. As you sit back down in your panic and flooding thoughts your eyes begin to get heavy. The drowsiness begins to overwhelm you and before you know it the fire is gone, it's all gone. You're trapped in a dream, but still conscious... to be continued`
   },
 
   //Barricaded ending
-  "3_b": {
+  "3_d": {
     "content": `As you examine your surroundings you notice you're underground, the way out has been completely barricaded. The flames begin to spread around you and move in unnatural ways, before you know it, your eyes begin to close again. The voice coming from the walkie talkie grows quieter and quieter, you're soon trapped in a never-ending dream.`,
   },
 
