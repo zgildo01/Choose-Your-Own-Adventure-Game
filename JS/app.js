@@ -13,9 +13,10 @@ const playerNameContainer = document.querySelector("#player-name")
 const storyContent = document.querySelector("#story-content");
 const confirmBtn = document.querySelector("#confirm-btn");
 const resetBtn = document.querySelector("#reset-btn");
-const options = document.querySelector("#options");
+const options = document.querySelector("#options"); // replace with choice-btns eventually, this selects the div rather than the buttons
 const startBtn = document.querySelector("#start");
 const nameQuestion = document.querySelector("#name-question");
+const audio = document.querySelector("audio");
 
 /*----------------------------- Event Listeners -----------------------------*/
 startBtn.addEventListener('click', gameInit);
@@ -37,6 +38,8 @@ function gameInit() {
 
 function formHandler(evt) {
   evt.preventDefault();
+  audio.volume = .0125;
+  audio.play();
   playerName = chosenName.value;
   nameQuestion.setAttribute("hidden", "true");
   renderPlayerName();
@@ -76,7 +79,7 @@ function renderStory(story) {
 
   for(let property in currentStoryChunk["responses"]) {
     if(currentStoryChunk["responses"].hasOwnProperty(property)) {
-      text += '<label><input class="choice-btns" type="radio" name="response" value="' + property + '"/><span>' + currentStoryChunk['responses'][property] + '</span></label>';
+      text += `<label><input class="choice-btns" type="radio" name="response" value="` + property + `"/><span>` + currentStoryChunk["responses"][property] + `</span></label>`;
     }
   }
 
