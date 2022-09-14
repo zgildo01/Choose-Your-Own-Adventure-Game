@@ -13,3 +13,7 @@
   -Dynamic Health Element
 
   -Backgrounds that correspond to the ending you get
+
+  -Settings dropdown that lets you choose how loud you want the game
+
+  -More story to come..
