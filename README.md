@@ -11,3 +11,5 @@
   -Inventory Feature
   
   -Dynamic Health Element
+
+  -Backgrounds that correspond to the ending you get
