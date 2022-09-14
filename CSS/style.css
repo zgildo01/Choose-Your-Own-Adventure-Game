@@ -21,13 +21,13 @@ body {
 
 #logo1 {
   grid-area: logo1;
-  height: 150px;
+  height: 125px;
   margin: 0 auto;
 }
 
 #logo2 {
   grid-area: logo2;
-  height: 150px;
+  height: 125px;
   margin: 0 auto;
 }
 
