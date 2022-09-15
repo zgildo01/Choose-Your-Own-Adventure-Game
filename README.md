@@ -5,7 +5,9 @@
   https://engulfment-project.netlify.app/
 
 ### SCREENSHOTS
-  image.png
+  ![image](https://user-images.githubusercontent.com/109769220/190425394-716be074-6b99-4d51-a3c6-07dec5a77e63.png)
+  ![image](https://user-images.githubusercontent.com/109769220/190425549-11288524-be87-4467-9be4-aeed4ee4443a.png)
+
 
 ### TECHNOLOGIES
   -HTML
