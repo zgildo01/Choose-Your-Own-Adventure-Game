@@ -4,9 +4,13 @@
 ### DEPLOYABLE LINK
   https://engulfment-project.netlify.app/
 
-### SCREENSHOTS COMING SOON
+### SCREENSHOTS
+  image.png
 
-### TECHNOLOGIES COMING SOON
+### TECHNOLOGIES
+  -HTML
+  -CSS
+  -JavaScript
 
 ### PLANNED ITEMS
   -Inventory Feature
