@@ -1,5 +1,5 @@
 # The Engulfment Project
-  The Engulfment Project is a simple choose your own adventure game styled after a journal written in using a pencil. I personally have always loved choose your own adventure games and cosmic horror which is why I've chosen to go for this!
+  The Engulfment Project is a simple choose your own adventure game where you play as an FBI SWAT Commander who has been taken by a cult you and your team were tasked with taking down. The cult having roots to some sort of cosmic horror has slowly been working on engulfing the planet in a never-ending dream, will you stop them? Can you stop them?
 
 ### DEPLOYABLE LINK
   https://engulfment-project.netlify.app/
