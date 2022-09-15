@@ -2,7 +2,7 @@
   The Engulfment Project is a simple choose your own adventure game where you play as an FBI SWAT Commander who has been taken by a cult you and your team were tasked with taking down. The cult having roots to some sort of cosmic horror has slowly been working on engulfing the planet in a never-ending dream, will you stop them? Can you stop them?
 
 ## DEPLOYABLE LINK
-  https://engulfment-project.netlify.app/
+  [The Engulfment Project](https://engulfment-project.netlify.app/)
 
 ## SCREENSHOTS
   ![image](https://user-images.githubusercontent.com/109769220/190425394-716be074-6b99-4d51-a3c6-07dec5a77e63.png)
@@ -15,6 +15,11 @@
   -CSS
 
   -JavaScript
+
+  -git
+
+  -[Planning Materials](https://drive.google.com/drive/u/0/folders/1zUNq4V708SK5nxXLupcVEeliSPhI0kkj)
+
 
 ## PLANNED ITEMS
   -Inventory Feature
