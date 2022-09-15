@@ -11,7 +11,9 @@
 
 ### TECHNOLOGIES
   -HTML
+
   -CSS
+
   -JavaScript
 
 ### PLANNED ITEMS
@@ -21,6 +23,6 @@
 
   -Backgrounds that correspond to the ending you get
 
-  -Settings dropdown that lets you choose how loud you want the game
+  -Settings dropdown that lets you choose how loud you want the game's music
 
   -More story to come..
