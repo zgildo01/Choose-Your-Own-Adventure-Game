@@ -50,7 +50,7 @@ function renderPlayerName() {
   if(playerName.match(letters) && playerName.length <= 20 && playerName !== ''){
     const playerNameP = document.createElement('p');
     playerNameP.setAttribute("id", "#user-input-name");
-    playerNameP.textContent = `Welcome home, ${(playerName).substring(0, 1).toUpperCase() + (playerName).substring(1)}.`;
+    playerNameP.textContent = `Welcome to your dreams, ${(playerName).substring(0, 1).toUpperCase() + (playerName).substring(1)}.`;
     playerNameContainer.appendChild(playerNameP);
     submitBtn.style.display = "none";
     chosenName.style.display = "none";

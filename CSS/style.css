@@ -114,11 +114,6 @@ body {
   gap: 1rem;
 }
 
-#chosen-name {
-  border: 3px solid white;
-  background-color: black;
-  color: white;
-}
 
 button {
   border: 3px solid white;
@@ -154,8 +149,24 @@ label {
   justify-content: center;
   border: 5px dashed white;
   border-radius: 25px;
+  cursor: pointer;
 }
 
 span {
   margin: 10px 0;
+}
+
+input {
+  visibility: hidden;
+}
+
+#chosen-name {
+  border: 3px solid white;
+  background-color: black;
+  color: white;
+  visibility: visible;
+}
+
+input:checked + span {
+  background-color: #333333;
 }
