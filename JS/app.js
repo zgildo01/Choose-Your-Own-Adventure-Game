@@ -38,8 +38,6 @@ function gameInit() {
 
 function formHandler(evt) {
   evt.preventDefault();
-  audio.volume = .0125;
-  audio.play();
   playerName = chosenName.value;
   getStoryChunks();
   nameQuestion.setAttribute("hidden", "true");
