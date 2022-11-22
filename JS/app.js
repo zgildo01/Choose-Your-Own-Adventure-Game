@@ -27,7 +27,7 @@ resetBtn.addEventListener('click', reset);
 options.addEventListener('click', function(evt) {
   confirmBtn.removeAttribute("hidden");
 })
-
+volIcon.addEventListener('click', playMusic)
 
 /*-------------------------------- Functions --------------------------------*/
 function gameInit() {
@@ -62,6 +62,14 @@ function renderPlayerName() {
 
 function reset() {
   window.location.reload();
+}
+
+function playMusic() {
+  if(audio.paused) {
+    audio.play()
+  } else if (audio.play) {
+    audio.pause()
+  }
 }
 
 function chooseOption(evt) {
