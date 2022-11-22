@@ -2,15 +2,20 @@
   font-family: 'DotGothic16', sans-serif;
 }
 
+html {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   display: grid;
   grid-template-areas:
-    "logo1 player-name logo2"
-    "story-display story-display story-display"
-    "choices choices choices"
-    "bottom-btns bottom-btns bottom-btns";
+    "logo1 player-name vol logo2"
+    "story-display story-display story-display story-display"
+    "choices choices choices choices"
+    "bottom-btns bottom-btns bottom-btns bottom-btns";
   grid-template-rows: 1fr 2fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 
   min-height: 100vh;
   text-align: center;
@@ -25,15 +30,24 @@ body {
   margin: 0 auto;
 }
 
+#player-name {
+  grid-area: player-name;
+  font-size: 30px;
+}
+
+#vol {
+  grid-area: vol;
+  height: 5rem;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
 #logo2 {
   grid-area: logo2;
   height: 125px;
   margin: 0 auto;
-}
-
-#player-name {
-  grid-area: player-name;
-  font-size: 30px;
 }
 
 #story-content {

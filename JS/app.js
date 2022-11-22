@@ -17,6 +17,7 @@ const options = document.querySelector("#options");
 const startBtn = document.querySelector("#start");
 const nameQuestion = document.querySelector("#name-question");
 const audio = document.querySelector("audio");
+const volIcon = document.getElementById("vol")
 
 /*----------------------------- Event Listeners -----------------------------*/
 startBtn.addEventListener('click', gameInit);
